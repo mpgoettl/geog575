@@ -1,1 +1,0 @@
-/* Stylesheet by Martin P. Goettl, 2021 */
