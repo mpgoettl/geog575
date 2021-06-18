@@ -118,10 +118,20 @@ var baseLayers = {
 				fillOpacity: 0.8
 			});
 		}
+	}).addTo(map);*/
+	
+	
+function onEachFeature(feature, layer){
+	L.geoJSON(appleton, {
+		onEachFeature: function (feature, layer) {
+  
+   
+		layer.bindPopup('<h1>'+feature.properties.City+'</h1><p>Pollution Type: '+feature.properties.USER_Pollu+'<p>Trend: '+feature.properties.USER_Trend+'</p>');
+	}}
 	}).addTo(map);
 	
-	var popup = L.popup();
-
+var popup = L.popup();
+	
 	function onMapClick(e) {
 		popup
 			.setLatLng(e.latlng)
@@ -129,17 +139,11 @@ var baseLayers = {
 			.openOn(map);
 	}
 
-	map.on('click', onMapClick);*/
-
-var layerGroup = L.geoJSON(appleton, {
-  onEachFeature: function (feature, layer) {
-  
-   
-    layer.bindPopup('<h1>'+feature.properties.City+'</h1><p>Pollution Type: '+feature.properties.USER_Pollu+'<p>Trend: '+feature.properties.USER_Trend+'</p>');
-  }
-}).addTo(map);
+map.on('click', onMapClick);
 	
 </script>
 </body>
 
 </html>
+
+<!--,ann,baycity,bismark,dickinson,clinton,flint,juneau,klamath,greenbay,mad,mil,msp,pitt,reno,stcloud,stlouis,stock,syr,tampa,dc -->
