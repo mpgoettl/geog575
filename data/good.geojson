@@ -1,5 +1,5 @@
 
-{
+var pollution  = { 
   "type": "FeatureCollection",
   "features": [
     {
@@ -17,66 +17,16 @@
         "2019": 8,
         "2020": 7.4,
         "name": "Appleton, WI, USA",
+        "city": "Appleton",
+        "state": "WI",
         "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
+        "tend": "Weighted Annual Mean"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
           -88.41714,
           44.26178
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "2010": 9.2,
-        "2011": 9.6,
-        "2012": 9.1,
-        "2013": 8.6,
-        "2014": 9.7,
-        "2015": 9.4,
-        "2016": 7.9,
-        "2017": 8,
-        "2018": 8.3,
-        "2019": 8.4,
-        "2020": 8.2,
-        "name": "Ann Arbor, MI, USA",
-        "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -83.74847,
-          42.2821
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "2010": 8.2,
-        "2011": 7.7,
-        "2012": 7.7,
-        "2013": 7.5,
-        "2014": 8.2,
-        "2015": 7.7,
-        "2016": 6.8,
-        "2017": 6.8,
-        "2018": 7.1,
-        "2019": 6.8,
-        "2020": 4.7,
-        "name": "Bay City, MI, USA",
-        "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -83.88491,
-          43.59527
         ]
       }
     },
@@ -95,8 +45,10 @@
         "2019": 4.4,
         "2020": 5.3,
         "name": "Bismarck, ND, USA",
+        "city": "Bismarck",
+        "state": "ND",
         "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
+        "tend": "Weighted Annual Mean"
       },
       "geometry": {
         "type": "Point",
@@ -121,8 +73,10 @@
         "2019": 3.4,
         "2020": 3.6,
         "name": "Dickinson, ND, USA",
+        "city": "Dickinson",
+        "state": "ND",
         "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
+        "tend": "Weighted Annual Mean"
       },
       "geometry": {
         "type": "Point",
@@ -135,78 +89,28 @@
     {
       "type": "Feature",
       "properties": {
-        "2010": 11.9,
-        "2011": 10.5,
-        "2012": 9.7,
-        "2013": 9.5,
-        "2014": 9.3,
-        "2015": 9.1,
-        "2016": 7.7,
-        "2017": 7.2,
-        "2018": 8.2,
-        "2019": 8.2,
-        "2020": 7.8,
-        "name": "Clinton, IA, USA",
+        "2010": 8.2,
+        "2011": 7.7,
+        "2012": 7.7,
+        "2013": 7.5,
+        "2014": 8.2,
+        "2015": 7.7,
+        "2016": 6.8,
+        "2017": 6.8,
+        "2018": 7.1,
+        "2019": 6.8,
+        "2020": 4.7,
+        "name": "Bay City, MI, USA",
+        "city": "Bay City",
+        "state": "MI",
         "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
+        "tend": "Weighted Annual Mean"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -90.19196,
-          41.83898
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "2010": 5.3,
-        "2011": 5.3,
-        "2012": 5.5,
-        "2013": 6.8,
-        "2014": 7,
-        "2015": 5.7,
-        "2016": 3.7,
-        "2017": 4,
-        "2018": 5,
-        "2019": 5,
-        "2020": 5.8,
-        "name": "Duluth, MN, USA",
-        "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -92.09985,
-          46.78796
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "2010": 8.9,
-        "2011": 8.5,
-        "2012": 8,
-        "2013": 7.4,
-        "2014": 8.9,
-        "2015": 8.2,
-        "2016": 7.2,
-        "2017": 7.1,
-        "2018": 7.4,
-        "2019": 7.2,
-        "2020": 6,
-        "name": "Flint, MI, USA",
-        "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -83.68679,
-          43.01144
+          -83.88491,
+          43.59527
         ]
       }
     },
@@ -225,8 +129,10 @@
         "2019": 6.8,
         "2020": 4.8,
         "name": "Juneau, AK, USA",
+        "city": "Juneau",
+        "state": "AK",
         "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
+        "tend": "Weighted Annual Mean"
       },
       "geometry": {
         "type": "Point",
@@ -239,52 +145,84 @@
     {
       "type": "Feature",
       "properties": {
-        "2010": 9.8,
-        "2011": 11,
-        "2012": 10.7,
-        "2013": 13,
-        "2014": 8.8,
-        "2015": 10.3,
-        "2016": 6.8,
-        "2017": 11.7,
-        "2018": 18.6,
-        "2019": 10.5,
-        "2020": 19.8,
-        "name": "Klamath Falls, OR, USA",
+        "2010": 8.9,
+        "2011": 8.5,
+        "2012": 8,
+        "2013": 7.4,
+        "2014": 8.9,
+        "2015": 8.2,
+        "2016": 7.2,
+        "2017": 7.1,
+        "2018": 7.4,
+        "2019": 7.2,
+        "2020": 6,
+        "name": "Flint, MI, USA",
+        "city": "Flint",
+        "state": "MI",
         "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
+        "tend": "Weighted Annual Mean"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -121.78206,
-          42.22388
+          -83.68679,
+          43.01144
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "2010": 10,
-        "2011": 10.1,
-        "2012": 8.7,
-        "2013": 7.6,
-        "2014": 9.1,
-        "2015": 8,
-        "2016": 6.9,
-        "2017": 6.1,
-        "2018": 6.4,
-        "2019": 7.3,
-        "2020": 7.3,
-        "name": "Green Bay, WI, USA",
+        "2010": 11.9,
+        "2011": 10.5,
+        "2012": 9.7,
+        "2013": 9.5,
+        "2014": 9.3,
+        "2015": 9.1,
+        "2016": 7.7,
+        "2017": 7.2,
+        "2018": 8.2,
+        "2019": 8.2,
+        "2020": 7.8,
+        "name": "Clinton, IA, USA",
+        "city": "Clinton",
+        "state": "IA",
         "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
+        "tend": "Weighted Annual Mean"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -88.01001,
-          44.513
+          -90.19196,
+          41.83898
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "2010": 9.2,
+        "2011": 9.6,
+        "2012": 9.1,
+        "2013": 8.6,
+        "2014": 9.7,
+        "2015": 9.4,
+        "2016": 7.9,
+        "2017": 8,
+        "2018": 8.3,
+        "2019": 8.4,
+        "2020": 8.2,
+        "name": "Ann Arbor, MI, USA",
+        "city": "Ann Arbor",
+        "state": "MI",
+        "pollution": "PM2.5",
+        "tend": "Weighted Annual Mean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.74847,
+          42.2821
         ]
       }
     },
@@ -303,8 +241,10 @@
         "2019": 8.6,
         "2020": 8.5,
         "name": "Madison, WI, USA",
+        "city": "Madison",
+        "state": "WI",
         "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
+        "tend": "Weighted Annual Mean"
       },
       "geometry": {
         "type": "Point",
@@ -329,8 +269,10 @@
         "2019": 8.5,
         "2020": 8.5,
         "name": "Milwaukee, WI, USA",
+        "city": "Milwaukee",
+        "state": "WI",
         "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
+        "tend": "Weighted Annual Mean"
       },
       "geometry": {
         "type": "Point",
@@ -343,52 +285,28 @@
     {
       "type": "Feature",
       "properties": {
-        "2010": 9.3,
-        "2011": 8.9,
-        "2012": 8.9,
-        "2013": 8.4,
-        "2014": 8,
-        "2015": 7,
-        "2016": 6.7,
-        "2017": 7.1,
-        "2018": 7.9,
-        "2019": 7.3,
-        "2020": 7.3,
-        "name": "Minneapolis-St. Paul-Bloomington, St Paul, MN, USA",
+        "2010": 9.8,
+        "2011": 11,
+        "2012": 10.7,
+        "2013": 13,
+        "2014": 8.8,
+        "2015": 10.3,
+        "2016": 6.8,
+        "2017": 11.7,
+        "2018": 18.6,
+        "2019": 10.5,
+        "2020": 19.8,
+        "name": "Klamath Falls, OR, USA",
+        "city": "Klamath Falls",
+        "state": "OR",
         "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
+        "tend": "Weighted Annual Mean"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -93.17848,
-          44.95751
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "2010": 12.8,
-        "2011": 11.4,
-        "2012": 10.4,
-        "2013": 10.3,
-        "2014": 10.5,
-        "2015": 10.1,
-        "2016": 9.3,
-        "2017": 9.9,
-        "2018": 8.8,
-        "2019": 8.8,
-        "2020": 7.8,
-        "name": "Pittsburgh, PA, USA",
-        "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -79.99734,
-          40.43851
+          -121.78206,
+          42.22388
         ]
       }
     },
@@ -407,8 +325,10 @@
         "2019": 3,
         "2020": 3,
         "name": "Reno, NV, USA",
+        "city": "Reno",
+        "state": "NV",
         "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
+        "tend": "Weighted Annual Mean"
       },
       "geometry": {
         "type": "Point",
@@ -433,8 +353,10 @@
         "2019": 5.7,
         "2020": 5.8,
         "name": "St Cloud, MN, USA",
+        "city": "St Cloud",
+        "state": "MN",
         "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
+        "tend": "Weighted Annual Mean"
       },
       "geometry": {
         "type": "Point",
@@ -447,26 +369,84 @@
     {
       "type": "Feature",
       "properties": {
-        "2010": 12.5,
-        "2011": 11.8,
-        "2012": 9.8,
-        "2013": 10.9,
-        "2014": 10.7,
-        "2015": 10.8,
-        "2016": 8.3,
-        "2017": 7.9,
-        "2018": 8.9,
-        "2019": 9,
-        "2020": 7.9,
-        "name": "St Louis, MO, USA",
+        "2010": 12.8,
+        "2011": 11.4,
+        "2012": 10.4,
+        "2013": 10.3,
+        "2014": 10.5,
+        "2015": 10.1,
+        "2016": 9.3,
+        "2017": 9.9,
+        "2018": 8.8,
+        "2019": 8.8,
+        "2020": 7.8,
+        "name": "Pittsburgh, PA, USA",
+        "city": "Pittsburgh",
+        "state": "PA",
         "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
+        "tend": "Weighted Annual Mean"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -90.19956,
-          38.62775
+          -79.99734,
+          40.43851
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "2010": 9.3,
+        "2011": 8.9,
+        "2012": 8.9,
+        "2013": 8.4,
+        "2014": 8,
+        "2015": 7,
+        "2016": 6.7,
+        "2017": 7.1,
+        "2018": 7.9,
+        "2019": 7.3,
+        "2020": 7.3,
+        "name": "Minneapolis-St. Paul-Bloomington, St Paul, MN, USA",
+        "city": "Minneapolis-St. Paul-Bloomington",
+        "state": "MN",
+        "pollution": "PM2.5",
+        "tend": "Weighted Annual Mean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.17848,
+          44.95751
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "2010": 10,
+        "2011": 10.1,
+        "2012": 8.7,
+        "2013": 7.6,
+        "2014": 9.1,
+        "2015": 8,
+        "2016": 6.9,
+        "2017": 6.1,
+        "2018": 6.4,
+        "2019": 7.3,
+        "2020": 7.3,
+        "name": "Green Bay, WI, USA",
+        "city": "Green Bay",
+        "state": "WI",
+        "pollution": "PM2.5",
+        "tend": "Weighted Annual Mean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.01001,
+          44.513
         ]
       }
     },
@@ -485,8 +465,10 @@
         "2019": 9.3,
         "2020": 14.4,
         "name": "Stockton, CA, USA",
+        "city": "Stockton",
+        "state": "CA",
         "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
+        "tend": "Weighted Annual Mean"
       },
       "geometry": {
         "type": "Point",
@@ -511,8 +493,10 @@
         "2019": 6.1,
         "2020": 6,
         "name": "Syracuse, NY, USA",
+        "city": "Syracuse",
+        "state": "NY",
         "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
+        "tend": "Weighted Annual Mean"
       },
       "geometry": {
         "type": "Point",
@@ -537,14 +521,44 @@
         "2019": 7.7,
         "2020": 7.9,
         "name": "Tampa, FL, USA",
+        "city": "Tampa",
+        "state": "FL",
         "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
+        "tend": "Weighted Annual Mean"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
           -82.45927,
           27.94653
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "2010": 12.5,
+        "2011": 11.8,
+        "2012": 9.8,
+        "2013": 10.9,
+        "2014": 10.7,
+        "2015": 10.8,
+        "2016": 8.3,
+        "2017": 7.9,
+        "2018": 8.9,
+        "2019": 9,
+        "2020": 7.9,
+        "name": "St Louis, MO, USA",
+        "city": "St Louis",
+        "state": "MO",
+        "pollution": "PM2.5",
+        "tend": "Weighted Annual Mean"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.19956,
+          38.62775
         ]
       }
     },
@@ -563,8 +577,10 @@
         "2019": 7.3,
         "2020": 6.3,
         "name": "Washington, DC, USA",
+        "city": "Washington",
+        "state": "DC",
         "pollution": "PM2.5",
-        "trend": "Weighted Annual Mean"
+        "tend": "Weighted Annual Mean"
       },
       "geometry": {
         "type": "Point",

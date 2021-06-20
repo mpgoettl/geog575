@@ -1,8 +1,7 @@
 /* Stylesheet by Martin P. Goettl, 2021 */
 
 $(document).ready(function() {
-		
-		var mapCenter = [41, -94];
+		var mapCenter = [39.34, -99.85];
 		var cities;
 		var map = L.map('map', {
 		defaultExtentControl: true,
@@ -10,33 +9,36 @@ $(document).ready(function() {
 		zoom: 4,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
 		scrollWheelZoom: true,
 		tap: false
-				
+		
 		});
 		
-		var basemaps = [
-			L.tileLayer('//{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
-				attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-				label: 'Toner Lite',				// optional label used for tooltip
-				iconURL: 'img/tonerGray.png'
-			}),
-			L.tileLayer('//{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {
-				label: 'Toner',
-				iconURL: 'img/tonerBlack.png'
-			}),
-			L.tileLayer('//{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png', {
-				attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-				label: 'Watercolor',
-				iconURL: 'img/watercolor.jpg'
-			})
-			
-		];
+	
+							// display Stamen_TonerLite tiles with light features and labels
+		var Stamen_TonerLite = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {
+			attribution: 'Map tiles by &copy <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'})
 
-		map.addControl(L.control.basemaps({
-			position: "topright",
-			basemaps: basemaps,
+							// display USGS_USImagery tiles with light features and labels
+		//var USGS_USImagery = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}', {
+			//atrribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'})
+	  
+	  
+							// display OpenStreetMap_Mapnik tiles with light features and labels
+		//var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			//atrribution: 'Map Tiles by &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'})
+
+		.addTo(map);
+
+		/*$.getJSON("map.json",function(data){
+			// add GeoJSON layer to the map once the file is loaded
+			var datalayer = L.geoJson(data ,{
+			onEachFeature: function(feature, featureLayer) {
+			featureLayer.bindPopup(feature.properties.name);
+			}
+			}).addTo(map);
+			map.fitBounds(datalayer.getBounds());
+			});*/
 			
-		}));
-		
+			
 		var popup = L.popup();
 	
 				function onMapClick(e) {
@@ -50,7 +52,6 @@ $(document).ready(function() {
 		$.getJSON("data/map.json",(function(data) {
 			var info = processData(data);
 			createPropSymbols(info.timestamps, data);
-			
 				function processData(data) {
 					var timestamps = [];
 					var min = Infinity;
@@ -62,7 +63,7 @@ $(document).ready(function() {
 						
 						for (var attribute in properties) {
 							
-							if (attribute != "id" &&
+							if ( attribute != "id" &&
 								attribute != "name" &&
 								attribute != "lat" &&
 								attribute != "lon" ) {
@@ -95,8 +96,8 @@ $(document).ready(function() {
 								pointToLayer: function(feature, latlng) {
 									
 								return L.circleMarker(latlng, {
-										fillColor: "yellow",
-										color: "black",
+										fillColor: "#708598",
+										color: "#537898",
 										weight: 1, 
 										fillOpacity: 0.6 
 									   }).on({
@@ -107,7 +108,7 @@ $(document).ready(function() {
 											},
 										   mouseout: function(e) {
 													this.closePopup();
-													this.setStyle({color: "black"});
+													this.setStyle({color: "#537898"});
 							
 											}
 										});
@@ -121,7 +122,11 @@ $(document).ready(function() {
 							
 									var props = layer.feature.properties;
 									var radius = calcPropRadius(props[timestamp]);
-									var popupContent = "<b>" + "Particulate Matter" + "</b><br><br>" + props.name + "<i>" + "</i>" + "</b><br>" + String(props[timestamp]) + " micrometers</b>" + "</i> in </i>" + timestamp;
+									var popupContent = "<b>" + String(props[timestamp]) + 
+											" units</b><br>" +
+											"<i>" + props.name +
+											"</i> in </i>" + 
+											timestamp + "</i>";
 
 									layer.setRadius(radius);
 									layer.bindPopup(popupContent, { offset: new L.Point(0,-radius) });
@@ -129,41 +134,11 @@ $(document).ready(function() {
 							}
 							function calcPropRadius(attributeValue) {
 
-								var scaleFactor = 20;
+								var scaleFactor = 16;
 								var area = attributeValue * scaleFactor;
 								return Math.sqrt(area/Math.PI)*2;			
 							}
 				}
-		function createLegend(map, attributes){
-			var LegendControl = L.Control.extend({
-				options: {
-					position: 'bottomright'
-				},
-
-				onAdd: function (map) {
-					// create the control container with a particular class name
-					var container = L.DomUtil.create('div', 'legend-control-container');
-
-					//add temporal legend div to container
-					$(container).append('<div id="temporal-legend">')
-
-					//Step 1: start attribute legend svg string
-					var svg = '<svg id="attribute-legend" width="180px" height="180px">';
-
-					//add attribute legend svg to container
-					$(container).append(svg);
-
-					return container;
-				}
-			});
-
-			map.addControl(new LegendControl());
-
-			updateLegend(map, attributes[0]);
-		};  
-
-		
-				
 				
 		}));
 			
