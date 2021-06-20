@@ -1,6 +1,7 @@
 /* Stylesheet by Martin P. Goettl, 2021 */
 /*console.log("hello world!");*/
 
+
 $(document).ready(function() {
 
 	var cities;	
@@ -20,18 +21,36 @@ $(document).ready(function() {
 	
 	.addTo(map);
 	
+	function onMapClick(e) {
+		popup
+			.setLatLng(e.latlng)
+			.setContent("This specific location on the map is " + e.latlng.toString())
+			.openOn(map);
+	}
+
+		map.on('click', onMapClick);
+	
 });
 
-$.getJSON("data/cityData.json")
+$.getJSON("data/map.json")
 	.done(function(data) {
+	L.geoJson(data, {
+	style: function (feature) {
+		return {color: feature.properties.color};
+	},
+	onEachFeature: function (feature, layer) {
+		layer.bindPopup(feature.properties.description);
+	}})
+	.addTo(map);
+	});
+	/*.done(function(data) {
+		console.log(data);
 		var info = processData(data);
 		createPropSymbols(info.timestamps, data);
 	 })
-.fail(function() { alert("There has been a problem loading the data.")});
-	
-	
-	
-	
+.fail(function() { alert("There has been a problem loading the data.")});*/
+
+/*	
 function processData(data) {
 	var timestamps = [];
 	var min = Infinity;
@@ -71,7 +90,30 @@ function processData(data) {
 }
 
 function createPropSymbols(timestamps, data) {
-		
-	cities = L.geoJson(data).addTo(map); 
-	
+			
+		cities = L.geoJson(data, {		
+
+			pointToLayer: function(feature, latlng) {	
+
+			return L.circleMarker(latlng, { 
+				 fillColor: "#708598",
+				 color: "#537898",
+				 weight: 1, 
+				 fillOpacity: 0.6 
+				}).on({
+
+					mouseover: function(e) {
+						this.openPopup();
+						this.setStyle({color: "yellow"});
+					},
+					mouseout: function(e) {
+						this.closePopup();
+						this.setStyle({color: "#537898"});
+							
+					}
+				});
+			}
+		}).addTo(map);
 }
+
+*/
