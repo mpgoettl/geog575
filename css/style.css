@@ -1,6 +1,6 @@
 /***** NAVBAR *****/
 .navbar-default {
-  background-color: #2b3e85;
+  background-color: black;
   border-radius: 0;
   background-image: none;
 }
@@ -99,8 +99,8 @@ a:hover {
 body {
   padding-top: 50px;
   font-family: 'Calibri',serif;
-  background-color: #f7f1fa;
-  color: #2b3e85;
+  background-color: white;
+  color: black;
 }
 
 
