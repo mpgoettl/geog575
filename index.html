@@ -2,8 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Geography 575 Lab 3</title>
+		<meta name="viewport" content="width=device-width">
+		<title>Particulate Matter</title>
 		<!-- <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> -->
 
 		<!--put your Bootstrap stylesheet links below this comment and above style.css-->
@@ -16,48 +16,220 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-default navbar-fixed-top"> <!-- Creates the navbar -->
-		  <div class="container">
-		    <div class="navbar-header"> <!-- Creates the navbar header -->
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-		        <span class="sr-only">Toggle navigation</span> <!-- Used for screen readers for accessibility -->
-						<span class="glyphicon glyphicon-menu-hamburger"></span><span class="menu"> Menu</span>
+		<nav class="navbar navbar-default navbar-fixed-top"> <!-- Create the navbar -->
+      <div class="container">
+        <div class="navbar-header"> <!-- Create the navbar -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+						<span class="glyphicon glyphicon-menu-hamburger"></span><span class="mobile-menu"> Menu</span>
 		      </button> <!-- Hamburger button for smaller devices -->
-					<a class="navbar-brand" >City Air Quality</a> <!-- Your website brand name -->
+					<a class="navbar-brand" href="index.html">Particulate Matter | home</a> <!-- Brand -->
 		    </div>
 
-		    <div id="navbar" class="collapse navbar-collapse"> <!-- Links to include in navbar -->
-		      <ul class="nav navbar-nav">  <!-- Unordered list for links on navbar -->
-		        <!--<li><a href="../about.html">About</a></li>
-				<li><a href="../resume.html" target="_blank">CV</a></li>
-		        <li><a href="../contact.html">Contact</a></li>-->
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div id="navbar" class="collapse navbar-collapse">
+		      <ul class="nav navbar-nav">
+				<li><a href="about.html">About</a></li>
+				<li><a href=https://www.epa.gov/pm-pollution target="_blank">EPA</a></li>
+				<!--<li><a href="contact.html">Contact</a></li>-->
 		      </ul>
-		    </div> <!-- end .navbar-collapse -->
-		  </div> <!-- end .container -->
-		</nav> <!-- end navigation bar -->
+		    </div> <!--/.navbar-collapse -->
+		  </div> <!--/.container -->
+		</nav> <!--/navigation bar -->
 
-		<div class="container-fluid">
+    <div class="jumbotron">
+      <div class="container">
+        <h2>Why care about PARTICULATE MATTER at all?</h2>
+      </div>
+    </div>
+	
+	
+		
+	<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
-					<h2 class="portfolio-title">What is PM 2.5?</h2>
-					<p class="portfolio-description">
-					Fine particulate matter (PM2.5) is an air pollutant that is a concern for people's health when levels in air are high. PM2.5 are tiny particles in the air that reduce visibility and cause the air to appear hazy when levels are elevated.
-					</p>
-					<h2 class="portfolio-title">How bad is PM 2.5?</h2>
-					<p class="portfolio-description">
-					Some particles less than 10 micrometers in diameter can get deep into your lungs and some may even get into your bloodstream. Of these, particles less than 2.5 micrometers in diameter, also known as fine particles or PM2.5, pose the greatest risk to health.</p>
+				<div class="col-md-3 col-md-offset-0 col-sm-3 col-sm-offset-0 col-xs-6 col-xs-offset-3">
+				<div class = "panel-group" id = "accordion">
+   <div class = "panel panel-default">
+      
+      <div class = "panel-heading">
+         <h4 class = "panel-title">
+            <a data-toggle = "collapse" data-parent = "#accordion" href = "#collapseOne">
+               What is Particulate Matter? 
+            </a>
+         </h4>
+      </div>
+      
+      <div id = "collapseOne" class = "panel-collapse collapse in">
+         <div class = "panel-body">
+            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred 
+               nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+         </div>
+      </div>
+      
+   </div>
+   
+   <div class = "panel panel-default">
+      <div class = "panel-heading">
+         <h4 class = "panel-title">
+            <a data-toggle = "collapse" data-parent = "#accordion" href = "#collapseTwo">
+               Are there different types of Particulate Matter? 
+            </a>
+         </h4>
+      </div>
+
+      <div id = "collapseTwo" class = "panel-collapse collapse">
+         <div class = "panel-body">
+            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt 
+               sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+         </div>
+      </div>
+      
+   </div>
+   
+   <div class = "panel panel-default">
+      <div class = "panel-heading">
+         <h4 class = "panel-title">
+            <a data-toggle = "collapse" data-parent = "#accordion" href = "#collapseThree">
+               Significance of PM 2.5 
+            </a>
+         </h4>
+      </div>
+     
+      <div id = "collapseThree" class = "panel-collapse collapse">
+         <div class = "panel-body">
+            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt 
+               sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+         </div>
+      </div>
+     
+   </div>
+   <div class = "panel panel-default">
+      <div class = "panel-heading">
+         <h4 class = "panel-title">
+            <a data-toggle = "collapse" data-parent = "#accordion" href = "#collapseFour">
+               What is Weighted Annual Mean?
+            </a>
+         </h4>
+      </div>
+     
+      <div id = "collapseFour" class = "panel-collapse collapse">
+         <div class = "panel-body">
+            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt 
+               sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+         </div>
+      </div>
+     
+   </div>
+   <div class = "panel panel-default">
+      <div class = "panel-heading">
+         <h4 class = "panel-title">
+            <a data-toggle = "collapse" data-parent = "#accordion" href = "#collapseFive">
+               How to use this Map
+            </a>
+         </h4>
+      </div>
+     
+      <div id = "collapseFive" class = "panel-collapse collapse">
+         <div class = "panel-body">
+            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt 
+               sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+         </div>
+      </div>
+     
+   </div>
+   
+    <div class = "panel panel-default">
+      <div class = "panel-heading">
+         <h4 class = "panel-title">
+            <a data-toggle = "collapse" data-parent = "#accordion" href = "#collapseFour">
+               What can I do to help?
+            </a>
+         </h4>
+      </div>
+     
+      <div id = "collapseFour" class = "panel-collapse collapse">
+         <div class = "panel-body">
+            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt 
+               sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+         </div>
+      </div>
+     
+   </div> 
+</div>
+				
+				
+					<!--<div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        <a data-toggle="collapse" data-parent="#accordion" href="#panelsStayOpen-collapseOne">Accordion Item #1</a>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Accordion Item #2
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body">
+        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Accordion Item #4
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+</div>-->
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 portfolio-image">
-				<iframe src="https://mpgoettl.github.io/geog575WM/index.html" style="width: 100%; height: 100vh; "style="border: none;" class="center-block img-responsive;"></iframe>
-					
+				<div class="col-md-9 col-md-offset-0 col-sm-9 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+						
+						<iframe src="https://mpgoettl.github.io/geog575WM/index.html" style="width: 100%; height: 65vh; "style="border: none;" class="center-block img-responsive;"></iframe>	
 				</div>
 			</div>
 		</div>
+    
+
+
+
+<div class="container">
+      <div class="row">
+		<p class="text-center"><br>
+			<a href="mailto:goettlm@uwec.edu"</a> <img src="img/email.png" alt="" style="width:5%" />
+			<a href ="https://www.linkedin.com/in/martingoettl/"</a> <img src="img/LinkedIn.png" alt="" style="width:5%" />
+			<a href ="https://twitter.com/mpgoettl?lang=en"</a> <img src="img/twitter.png" alt="" style="width:5%" /></p> 
 		
+
 		<!--put your external script links here-->
-		<script type="text/javascript" src="lib/jquery-1.11.3.js"></script>
-		<script type="text/javascript" src="lib/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	</body>
 </html>

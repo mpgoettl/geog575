@@ -37,35 +37,11 @@
   color: #242424;
 }
 
-/*** Portfolio pieces ***/
-.portfolio-thumbnail {
-  background-color: #fff;
-  border-color: #863ee3;
-  border-width: 2px;
-  width: 95%;
-}
-
-.portfolio-thumbnail:hover {
-  border-color: #ebd122;
-}
-
-.portfolio-title {
-  font-weight: bold;
-}
-
-.portfolio-description {
-}
-
-.portfolio-image {
-}
 
 #about-world {
   max-height: 200px;
 }
 
-.resume h3 {
-  font-weight: bold;
-}
 
 hr {
   border-color: white;
@@ -103,4 +79,14 @@ body {
   color: black;
 }
 
+h4 {
+	font-family: 'Calibri',serif; 
+   	font-weight: bold;
+   	color: black;
+   	text-align: center;
+
+}
+.panel-title {
+	font-size: 20px;
+}
 
