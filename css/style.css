@@ -37,6 +37,9 @@
   color: #242424;
 }
 
+.hamburger{
+	background-color: white !important;
+}
 
 #about-world {
   max-height: 200px;
